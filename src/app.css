@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	background-color: #18181b;
+	color: white;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.gradient {
+	background: linear-gradient(to right, #a78bfa, #ddd6fe, #ffffff);
+	-webkit-background-clip: text;
+	color: transparent;
+}
