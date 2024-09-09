@@ -9,6 +9,7 @@
 		"db:fresh": "npx prisma migrate reset",
 		"db:migrate": "npx prisma migrate dev",
 		"db:generate": "npx prisma generate",
+		"db:deploy": "npx prisma migrate deploy",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
