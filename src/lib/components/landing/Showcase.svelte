@@ -1,7 +1,7 @@
 <div id="showcase" class="w-full py-16 bg-gradient-to-b from-[#1f1f22] to-[#131315]">
 	<div class="max-w-5xl mx-auto px-6 md:px-10">
 		<h1 class="text-2xl md:text-3xl font-extrabold text-white mb-4 text-center tracking-wide">
-			My talk on Laravel <div class="ml-2 inline-flex animate-bounce">🚀</div>
+			My Talk on Laravel <div class="ml-2 inline-flex animate-bounce">🚀</div>
 		</h1>
 		<p class="max-w-xl mx-auto text-md text-gray-400 mb-8 text-center leading-relaxed">
 			Deep dive with me into the Laravel framework and its ecosystem that makes it an excellent
