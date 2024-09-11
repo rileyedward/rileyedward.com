@@ -35,7 +35,7 @@
 	];
 </script>
 
-<div class="max-w-4xl mx-auto py-24 px-8 flex flex-col gap-20">
+<div class="max-w-4xl mx-auto py-24 px-8 flex flex-col gap-4 md:gap-8">
 	{#each experiences as experience, i}
 		<div
 			class="flex flex-col md:flex-row gap-12 bg-neutral-800 p-6 rounded-2xl hover:scale-105 transition-all duration-300 cursor-pointer"
@@ -75,5 +75,13 @@
 				<p class="text-gray-200 leading-relaxed">{experience.description}</p>
 			</div>
 		</div>
+		{#if i !== experiences.length - 1}
+				<!-- Trtiple Dots -->
+				 <div class="flex flex-col gap-2 mx-auto">
+					{#each Array(3) as _, i}
+				 		<div class="w-2 h-2 bg-violet-300 rounded-full"></div>
+				 {/each}
+				 </div>
+			{/if}
 	{/each}
 </div>
