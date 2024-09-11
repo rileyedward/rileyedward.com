@@ -9,7 +9,7 @@
 		<img
 			src="/profile.png"
 			alt="Profile"
-			class="w-[200px] md:w-[300px] h-[200px] md:h-[300px] rounded-2xl object-cover shadow-lg bg-gradient-to-t from-neutral-800 via-neutral-900 to-transparent"
+			class="w-[200px] md:w-[300px] h-[200px] md:h-[300px] rounded-2xl object-cover shadow-lg bg-gradient-to-bl from-neutral-800 via-neutral-900 to-transparent"
 		/>
 		<div class="text-center md:text-left max-w-lg">
 			<p class="text-base font-semibold mb-2 text-neutral-200">Hi, I'm Riley! 👋🏻</p>
