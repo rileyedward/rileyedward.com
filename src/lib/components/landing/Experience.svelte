@@ -76,12 +76,12 @@
 			</div>
 		</div>
 		{#if i !== experiences.length - 1}
-				<!-- Trtiple Dots -->
-				 <div class="flex flex-col gap-2 mx-auto">
-					{#each Array(3) as _, i}
-				 		<div class="w-2 h-2 bg-violet-300 rounded-full"></div>
-				 {/each}
-				 </div>
-			{/if}
+			<!-- Trtiple Dots -->
+			<div class="flex flex-col gap-2 mx-auto">
+				{#each Array(3) as _, i}
+					<div class="w-2 h-2 bg-violet-300 rounded-full"></div>
+				{/each}
+			</div>
+		{/if}
 	{/each}
 </div>
