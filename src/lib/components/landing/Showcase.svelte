@@ -4,8 +4,8 @@
 			My talk on Laravel <div class="ml-2 inline-flex animate-bounce">🚀</div>
 		</h1>
 		<p class="max-w-xl mx-auto text-md text-gray-400 mb-8 text-center leading-relaxed">
-			Deep dive with me into the Laravel framework and its ecosystem that makes it an 
-			excellent choice for building web applications.
+			Deep dive with me into the Laravel framework and its ecosystem that makes it an excellent
+			choice for building web applications.
 		</p>
 		<a href="https://www.youtube.com/embed/kHjGp0Xtinw?si=J1Y4H3wObjIP72gG" target="_blank">
 			<div
@@ -13,8 +13,12 @@
 				style="padding-bottom: 56.25%;"
 			>
 				<!-- Dark Overlay with Gradient -->
-				<div class="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-50 hover:opacity-0 z-30 bg-neutral"></div>
-				<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50 hover:opacity-0 z-30 bg-neutral"></div>
+				<div
+					class="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-50 hover:opacity-0 z-30 bg-neutral"
+				></div>
+				<div
+					class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50 hover:opacity-0 z-30 bg-neutral"
+				></div>
 
 				<!-- Video Container -->
 				<iframe

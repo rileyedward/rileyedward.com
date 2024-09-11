@@ -14,9 +14,9 @@
 		<div class="text-center md:text-left max-w-lg">
 			<p class="text-base font-semibold mb-2 text-neutral-200">Hi, I'm Riley! 👋🏻</p>
 			<p
-				class="text-2xl md:text-4xl max-w-xs md:max-w-full font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-indigo-600 mb-6"
+				class="text-2xl md:text-5xl max-w-[250px] md:max-w-md font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-indigo-600 mb-6"
 			>
-				Building full-stack applications for the web.
+				Building full-stack web applications.
 			</p>
 			<a
 				href="/projects"
