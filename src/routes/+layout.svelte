@@ -6,6 +6,13 @@
 	import ContactModal from '$lib/components/ContactModal.svelte';
 	import GlobalAlerts from '$lib/components/GlobalAlerts.svelte';
 	import Footer from '$lib/components/navigation/Footer.svelte';
+	import { dev } from '$app/environment';
+	import { inject } from '@vercel/analytics';
+
+	// Vercel Analytics
+	if (!dev) {
+		inject();
+	}
 </script>
 
 <div>
