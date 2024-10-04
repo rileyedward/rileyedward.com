@@ -1,38 +1,49 @@
-# create-svelte
+# rileyedward.com
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+My personal website.
 
-## Creating a project
+## Getting Started
 
-If you're seeing this, you've probably already done this step. Congrats!
+### Prerequisites
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+Ensure you have the following prerequisites installed on your system. You can verify each installation by running the provided commands in your terminal.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+1. **Docker** is used for containerization. Confirm Docker is installed by running:
 
-## Developing
+   ```bash
+   docker --version
+   ```
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+2. **Node** and **NPM** (Node Package Manager) are needed for managing frontend dependencies. Check their installations with:
 
-```bash
-npm run dev
+   ```bash
+   node --version
+   npm --version
+   ```
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+### Installation
 
-## Building
+1. Duplicate the example environment file and configure it with your settings:
 
-To create a production version of your app:
+   ```bash
+   cp .env.example .env
+   ```
 
-```bash
-npm run build
-```
+2. Install JavaScript dependencies:
 
-You can preview the production build with `npm run preview`.
+   ```bash
+   npm install
+   ```
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+3. Build the PostgreSQL database and run migrations:
+
+   ```bash
+   npm run db:build
+   npm run db:migrate
+   ```
+
+4. Compile assets and run the Svelte application:
+
+   ```bash
+   npm run dev
+   ```
