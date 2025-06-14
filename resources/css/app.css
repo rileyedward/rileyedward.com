@@ -3,5 +3,10 @@
 
 html,
 body {
+    /* Global Fonts */
     font-family: 'JetBrains Mono', monospace;
+
+    /* Global Colors */
+    background-color: #111;
+    color: #fff;
 }
