@@ -12,3 +12,5 @@ Route::post('/contact-message', ContactMessageController::class)->name('contact-
 Route::get('/construction', function () {
     return view('construction');
 })->name('construction');
+
+require __DIR__.'/admin.php';
