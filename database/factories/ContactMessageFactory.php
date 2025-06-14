@@ -14,7 +14,7 @@ class ContactMessageFactory extends Factory
             'email' => fake()->safeEmail(),
             'phone' => fake()->phoneNumber(),
             'subject' => fake()->sentence(),
-            'message' => fake()->paragraph()
+            'message' => fake()->paragraph(),
         ];
     }
 }
