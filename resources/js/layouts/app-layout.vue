@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import BackgroundBlur from '@/components/background/background-blur.vue';
-import Navbar from '@/components/navigation/navbar.vue';
 import ContactModal from '@/components/contact/contact-modal.vue';
+import Navbar from '@/components/navigation/navbar.vue';
 import { Props } from '@/types/layouts/app-layout';
 import { Head as InertiaHead } from '@inertiajs/vue3';
 
@@ -16,7 +16,7 @@ withDefaults(defineProps<Props>(), {
 
     <navbar :always-show-navbar="alwaysShowNavbar" />
 
-    <main class="mt-16 z-100">
+    <main class="z-100 mt-16">
         <slot />
     </main>
 
