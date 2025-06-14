@@ -54,16 +54,6 @@ const handleScrollDown = (): void => {
 
 <template>
     <section class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <div class="bg-grid-white/[0.05] absolute inset-0 bg-[#111] opacity-90"></div>
-
-            <div class="absolute -top-20 -left-20 h-60 w-60 animate-pulse rounded-full bg-purple-500 opacity-10 blur-3xl filter"></div>
-            <div
-                class="absolute -right-20 -bottom-20 h-60 w-60 animate-pulse rounded-full bg-cyan-500 opacity-10 blur-3xl filter"
-                style="animation-delay: 2s"
-            ></div>
-        </div>
-
         <div class="z-10 px-6 text-center">
             <div class="mb-4 overflow-hidden">
                 <h1
@@ -106,7 +96,7 @@ const handleScrollDown = (): void => {
             </div>
         </div>
 
-        <div class="absolute right-0 bottom-8 left-0 flex justify-center opacity-50">
+        <div class="absolute right-0 bottom-8 left-0 z-10 flex justify-center opacity-50">
             <div class="flex space-x-2">
                 <div class="h-1 w-16 bg-purple-500"></div>
                 <div class="h-1 w-4 bg-white"></div>
@@ -117,13 +107,6 @@ const handleScrollDown = (): void => {
 </template>
 
 <style scoped>
-.bg-grid-white {
-    background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 40px 40px;
-}
-
 .title-enter {
     animation: titleEnter 600ms forwards;
 }
