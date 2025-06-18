@@ -37,7 +37,7 @@ const formattedDate = computed((): string => {
         <inertia-link :href="`/blog/${props.post.slug}`" class="block h-full">
             <div class="p-6">
                 <div v-if="props.post.category || props.categoryName" class="mb-3">
-                    <span class="inline-block rounded-md bg-purple-900 px-2 py-1 text-xs text-purple-200">
+                    <span class="inline-block rounded-md bg-cyan-900 px-2 py-1 text-xs text-cyan-200">
                         {{ props.post.category || props.categoryName }}
                     </span>
                 </div>
