@@ -55,7 +55,7 @@ const handleScrollDown = (): void => {
 <template>
     <section class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden">
         <div class="z-10 px-6 text-center">
-            <div class="mb-4 overflow-hidden">
+        <div class="mb-4 overflow-hidden">
                 <h1
                     class="text-4xl font-bold tracking-tight transition-transform duration-1000 ease-out md:text-6xl"
                     :class="titleVisible ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'"
