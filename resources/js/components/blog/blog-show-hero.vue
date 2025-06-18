@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
 import RetroGrid from '@/components/background/retro-grid.vue';
 import { Props } from '@/types/components/blog/blog-show-hero';
+import { onMounted, ref } from 'vue';
 
 withDefaults(defineProps<Props>(), {
     date: '',
     author: '',
-    category: ''
+    category: '',
 });
 
 const titleVisible = ref(false);
@@ -57,7 +57,11 @@ const handleScrollDown = (): void => {
                     <div class="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-400">
                         <span v-if="date" class="flex items-center">
                             <svg class="mr-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                    clip-rule="evenodd"
+                                ></path>
                             </svg>
                             {{ date }}
                         </span>
@@ -69,7 +73,11 @@ const handleScrollDown = (): void => {
                         </span>
                         <span v-if="category" class="flex items-center">
                             <svg class="mr-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z"
+                                    clip-rule="evenodd"
+                                ></path>
                             </svg>
                             {{ category }}
                         </span>

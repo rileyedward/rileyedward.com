@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
 import RetroGrid from '@/components/background/retro-grid.vue';
+import { onMounted, ref } from 'vue';
 
 const titleVisible = ref(false);
 const subtitleVisible = ref(false);
