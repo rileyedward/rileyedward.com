@@ -19,7 +19,9 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->web(append: [
             HandleInertiaRequests::class,
             AddLinkHeadersForPreloadedAssets::class,
-            HandleConstruction::class,
+            // Handles redirecting to a construction page in production
+            // when accessing any route other than the construction route
+            // HandleConstruction::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
