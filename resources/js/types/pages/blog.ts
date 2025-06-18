@@ -1,4 +1,5 @@
 import { BlogPost } from '@/types/models/blog-post';
+import { Category } from '@/types/models/category';
 
 export interface BlogShowPageProps {
     blogPost: BlogPost & {
@@ -9,5 +10,6 @@ export interface BlogShowPageProps {
 }
 
 export interface BlogIndexPageProps {
-    blogPosts?: BlogPost[];
+    blogPosts?: BlogPost[] | null;
+    categories?: Category[] | null;
 }

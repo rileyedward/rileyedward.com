@@ -10,7 +10,7 @@ marked.setOptions({
     gfm: true,
 });
 
-const htmlContent = computed(() => {
+const htmlContent = computed((): string => {
     try {
         if (!props.content) return '<p>No content available</p>';
         return marked(props.content);

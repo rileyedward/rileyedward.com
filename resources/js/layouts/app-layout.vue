@@ -16,7 +16,7 @@ withDefaults(defineProps<Props>(), {
 
     <navbar :always-show-navbar="alwaysShowNavbar" />
 
-    <main class="z-100 mt-16">
+    <main class="z-10 mt-16">
         <slot />
     </main>
 
