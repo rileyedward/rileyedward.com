@@ -24,7 +24,7 @@ class BlogPostSeeder extends Seeder
 
             $slug = pathinfo($file, PATHINFO_FILENAME);
             $title = Str::title(str_replace('-', ' ', $slug));
-            $content = file_get_contents(public_path('blog-posts/' . $file));
+            $content = file_get_contents(public_path('blog-posts/'.$file));
             $category = Category::query()->where('slug', 'tech')->first();
 
             BlogPost::query()->create([
