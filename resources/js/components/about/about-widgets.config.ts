@@ -5,12 +5,12 @@ export const aboutWidgets: AboutWidget[] = [
     {
         icon: BoxesIcon,
         title: "Rubik's Cube Record",
-        message: '30 seconds',
+        message: '33 seconds',
     },
     {
         icon: KeyboardIcon,
-        title: 'WPM Record',
-        message: '165 WPM',
+        title: 'Fastest WPM',
+        message: '164',
     },
     {
         icon: DiscIcon,
@@ -18,14 +18,14 @@ export const aboutWidgets: AboutWidget[] = [
         message: 'Disc Golf',
     },
     {
-        icon: GamepadIcon,
-        title: 'Currently Playing',
-        message: 'Hitman World of Assassins',
-    },
-    {
         icon: HeadphonesIcon,
         title: 'On Repeat',
         message: 'Big Thief - Shark Smile',
+    },
+    {
+        icon: GamepadIcon,
+        title: 'Currently Playing',
+        message: 'Hitman World of Assassins',
     },
     {
         icon: BookIcon,

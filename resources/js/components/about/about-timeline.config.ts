@@ -2,45 +2,49 @@ import { TimelineItem } from '@/types/components/about/about-timeline';
 
 export const timelineItems: TimelineItem[] = [
     {
-        title: 'Childhood',
-        subtitle: '1990 - 2008',
+        title: 'Finding my way into programming',
+        subtitle: '2015 - 2021',
         description: `
-            During my childhood years, I developed a deep curiosity for technology and problem-solving.
-            I spent countless hours taking apart electronics and putting them back together,
-            just to understand how they worked. This early fascination laid the groundwork for my
-            future career in technology.
+            My journey into programming began in 2015 when I started experimenting with web development
+            out of curiosity. I taught myself HTML, CSS, and JavaScript through online tutorials and
+            personal experimentation, and quickly found myself drawn to the creativity and logic
+            programming required.
 
-            My parents encouraged this curiosity, providing me with books, kits, and opportunities
-            to learn more about the subjects that interested me. These formative years shaped my
-            approach to learning and my desire to understand systems from the ground up.
+            I later attended Missouri State University, where I continued honing my skills through
+            personal and side projects while working as a web developer for the university. These
+            hands-on experiences gave me valuable exposure to real-world codebases and laid the
+            groundwork for the product-driven mindset I bring to my work today.
         `,
         align: 'left',
     },
     {
-        title: 'College',
-        subtitle: '2008 - 2012',
+        title: 'My early professional career',
+        subtitle: '2021 - 2024',
         description: `
-            College was a transformative period where I honed my technical skills and discovered my
-            passion for software development. I majored in Computer Science, but also took courses in
-            design and business to develop a well-rounded perspective.
+            I began my professional journey as a full-stack developer, primarily working with Laravel
+            and Vue.js. I quickly gained real-world experience building production-grade applications
+            that were performant, maintainable, and user-centric.
 
-            During this time, I worked on several projects that combined my technical knowledge with
-            creative problem-solving. I also participated in hackathons and coding competitions, which
-            taught me how to work effectively under pressure and collaborate with diverse teams.
+            During this time, I contributed to projects ranging from internal tools to customer-facing
+            platforms, collaborating closely with designers and stakeholders. I learned how to architect
+            scalable systems, write thoughtful code, and adapt quickly to evolving requirements—all while
+            pushing myself to take on greater responsibility with each project.
         `,
         align: 'right',
     },
     {
-        title: 'Adulthood',
-        subtitle: '2012 - Present',
+        title: 'What about now?',
+        subtitle: '2024 - Today',
         description: `
-            Since graduating, I've been fortunate to work on a variety of challenging projects that have
-            expanded my skills and perspective. I've specialized in web development, focusing on creating
-            intuitive, accessible, and performant applications.
+            In 2024, I moved back to Kansas City to begin a new chapter in my career. I started working
+            for a local startup, where I was able to contribute to a fast-moving product team and gain
+            valuable experience in a lean, iterative environment.
 
-            I believe in continuous learning and regularly dedicate time to exploring new technologies and
-            methodologies. Outside of work, I contribute to open-source projects and mentor aspiring
-            developers, finding fulfillment in giving back to the community that has supported my growth.
+            Since then, I’ve transitioned into a role where I build custom applications from the ground
+            up for clients—much like the work I loved doing early on. From initial planning to final
+            deployment, I’m responsible for delivering full-stack solutions that are clean, scalable,
+            and tailored to each project's goals. I'm still working mostly with Laravel, Vue, and Inertia,
+            and constantly refining my approach to software that’s both beautiful and effective.
         `,
         align: 'left',
     },

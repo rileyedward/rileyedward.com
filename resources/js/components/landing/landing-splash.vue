@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Link as InertiaLink } from '@inertiajs/vue3';
 import { onMounted, onUnmounted, ref } from 'vue';
 import { landingSplashSubtitles } from './landing-splash.config';
 
@@ -43,13 +44,6 @@ onUnmounted(() => {
         clearInterval(titleRotationInterval);
     }
 });
-
-const handleScrollDown = (): void => {
-    window.scrollBy({
-        top: 200,
-        behavior: 'smooth',
-    });
-};
 </script>
 
 <template>
@@ -87,19 +81,12 @@ const handleScrollDown = (): void => {
             </div>
 
             <div class="transition-all duration-1000 ease-out" :class="ctaVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'">
-                <button
-                    @click="handleScrollDown"
+                <inertia-link
+                    :href="route('about.index')"
                     class="inline-flex items-center gap-2 rounded-lg border-2 border-white px-6 py-3 font-medium tracking-wide text-white shadow-md transition-all duration-300 ease-in-out hover:border-transparent hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-400 hover:text-white"
                 >
-                    Learn More
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path
-                            fill-rule="evenodd"
-                            d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                        />
-                    </svg>
-                </button>
+                    Get to know me
+                </inertia-link>
             </div>
         </div>
 
