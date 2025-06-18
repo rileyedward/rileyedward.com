@@ -7,6 +7,6 @@ import AppLayout from '@/layouts/app-layout.vue';
     <app-layout page-title="Home">
         <landing-splash />
 
-        <div style="height: 1000px" />
+        <div style="height: 500px" />
     </app-layout>
 </template>
