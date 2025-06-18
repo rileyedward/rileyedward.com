@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactMessageController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +19,14 @@ Route::get('/portfolio', function () {
 Route::get('/blog', function () {
     return inertia('blog');
 })->name('blog.index');
+
+Route::controller(BlogController::class)
+    ->prefix('blog')
+    ->name('blog.')
+    ->group(static function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/{blogPost:slug}', 'show')->name('show');
+    });
 
 Route::post('/contact-message', ContactMessageController::class)->name('contact-message');
 
