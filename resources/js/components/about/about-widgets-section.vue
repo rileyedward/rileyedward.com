@@ -4,7 +4,7 @@ import { aboutWidgets } from './about-widgets.config';
 </script>
 
 <template>
-    <section class="py-12">
+    <section class="mx-auto max-w-6xl py-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                 <about-widget

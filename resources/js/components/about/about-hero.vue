@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import TechPattern from '@/components/background/tech-pattern.vue';
-import { aboutHeroConfig } from './about-hero.config';
 import { onMounted, ref } from 'vue';
+import { aboutHeroConfig } from './about-hero.config';
 
-const { role, description, personalProjects, techStack } = aboutHeroConfig;
+const { role, description, techStack } = aboutHeroConfig;
 
 const titleVisible = ref(false);
 const roleVisible = ref(false);
@@ -40,13 +40,13 @@ const handleScrollDown = (): void => {
     <section class="relative flex min-h-[70vh] flex-col items-center justify-center overflow-hidden bg-[#111]">
         <tech-pattern />
 
-        <div class="z-10 px-6 max-w-4xl mx-auto">
+        <div class="z-10 mx-auto max-w-4xl px-6">
             <div class="mb-6 overflow-hidden">
                 <h1
                     class="text-4xl font-bold tracking-tight text-white transition-transform duration-1000 ease-out md:text-6xl"
                     :class="titleVisible ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'"
                 >
-                    About <span class="text-purple-400">Me</span>
+                    A bit <span class="text-purple-400">more</span> about me
                 </h1>
             </div>
 
@@ -65,25 +65,17 @@ const handleScrollDown = (): void => {
                     :class="detailsVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
                 >
                     <p class="mb-4">{{ description }}</p>
-
-                    <div class="mb-2 font-medium">Current Projects:</div>
-                    <ul class="list-disc list-inside mb-4 pl-2">
-                        <li v-for="(project, index) in personalProjects" :key="index">{{ project }}</li>
-                    </ul>
                 </div>
             </div>
 
             <div class="overflow-hidden">
-                <div
-                    class="transition-all duration-700"
-                    :class="techVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
-                >
-                    <div class="mb-2 text-lg font-medium text-white">Tech Stack</div>
+                <div class="transition-all duration-700" :class="techVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'">
+                    <div class="mb-2 text-lg font-medium text-white">My Current Stack</div>
                     <div class="flex flex-wrap gap-2">
                         <span
                             v-for="(tech, index) in techStack"
                             :key="index"
-                            class="px-3 py-1 bg-purple-500 bg-opacity-30 rounded-full text-sm text-white"
+                            class="bg-opacity-30 rounded-full bg-purple-500 px-3 py-1 text-sm text-white"
                         >
                             {{ tech }}
                         </span>

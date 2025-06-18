@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import AboutHero from '@/components/about/about-hero.vue';
 import AboutWidgetsSection from '@/components/about/about-widgets-section.vue';
 import AppLayout from '@/layouts/app-layout.vue';
-import AboutHero from '@/components/about/about-hero.vue';
 </script>
 
 <template>
