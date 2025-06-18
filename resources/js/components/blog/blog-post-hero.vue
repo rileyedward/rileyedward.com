@@ -97,9 +97,12 @@ const handleScrollDown = (): void => {
             <div class="transition-all duration-1000 ease-out" :class="ctaVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'">
                 <button
                     @click="handleScrollDown"
-                    class="inline-block border-2 border-white px-6 py-3 font-medium tracking-wide transition-colors duration-300 ease-in-out hover:bg-white hover:text-[#111]"
+                    class="inline-flex items-center gap-2 rounded-lg border-2 border-white px-6 py-3 font-medium tracking-wide text-white shadow-md transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-400 hover:border-transparent hover:text-white"
                 >
                     Read Article
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
                 </button>
             </div>
         </div>

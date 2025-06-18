@@ -28,7 +28,6 @@ const htmlContent = computed((): string => {
 </template>
 
 <style>
-/* Global styles for markdown content */
 .prose-invert h1,
 .prose-invert h2,
 .prose-invert h3,
