@@ -8,13 +8,8 @@ export const professionalExperiences: ProfessionalExperience[] = [
         startDate: '2025-01',
         location: 'Kansas City, MO',
         companySize: 'small',
-        description: 'Led full-stack development of customer-facing web applications serving 100K+ users. Collaborated with cross-functional teams to deliver high-quality software solutions and mentor junior developers.',
-        keyAchievements: [
-            'Architected and built a new customer portal that increased user engagement by 40%',
-            'Reduced application load times by 60% through performance optimization initiatives',
-            'Mentored 3 junior developers and led code review processes for the team',
-            'Implemented automated testing suite that reduced bugs in production by 35%'
-        ],
+        description:
+            'Currently developing and maintaining custom web applications for clients using modern technology stack. Collaborating with cross-functional teams to deliver high-quality software solutions.',
         technologies: ['Laravel', 'PHP', 'TypeScript', 'Vue', 'PostgreSQL'],
     },
     {
@@ -25,12 +20,12 @@ export const professionalExperiences: ProfessionalExperience[] = [
         endDate: '2025-01',
         location: 'Kansas City, MO',
         companySize: 'startup',
-        description: 'Led full-stack development of customer-facing web applications serving 100K+ users. Collaborated with cross-functional teams to deliver high-quality software solutions and mentor junior developers.',
+        description:
+            'Completed full-stack development initiatives in a fast-paced startup environment, wearing multiple hats across development, DevOps, and customer success. Implemented core product features, established cloud infrastructure, and worked directly with customers to drive product adoption and improvements.',
         keyAchievements: [
-            'Architected and built a new customer portal that increased user engagement by 40%',
-            'Reduced application load times by 60% through performance optimization initiatives',
-            'Mentored 3 junior developers and led code review processes for the team',
-            'Implemented automated testing suite that reduced bugs in production by 35%'
+            'Spearheaded the architectural redesign of data ingestion pipeline, resulting in enhanced reporting capabilities and actionable analytics for customer operations.',
+            'Participated in business discussions to identify and prioritize product features, ensuring the development team was on-track to deliver on time and on budget.',
+            'Conducted on-site customer visits to deliver hands-on training, gather feedback, and implement system improvements based on direct user insights.',
         ],
         technologies: ['Svelte Kit', 'TypeScript', 'PostgreSQL', 'Node', 'Docker', 'AWS'],
     },
@@ -42,12 +37,12 @@ export const professionalExperiences: ProfessionalExperience[] = [
         endDate: '2024-08',
         location: 'Springfield, MO',
         companySize: 'medium',
-        description: 'Led full-stack development of customer-facing web applications serving 100K+ users. Collaborated with cross-functional teams to deliver high-quality software solutions and mentor junior developers.',
+        description:
+            'Spearheaded development of custom web solutions for diverse client portfolio, ensuring seamless communication and timely delivery of projects. Worked directly with clients to gather requirements, provide technical consultation, and implement innovative solutions that met their business objectives.',
         keyAchievements: [
-            'Architected and built a new customer portal that increased user engagement by 40%',
-            'Reduced application load times by 60% through performance optimization initiatives',
-            'Mentored 3 junior developers and led code review processes for the team',
-            'Implemented automated testing suite that reduced bugs in production by 35%'
+            'Designed and developed comprehensive big data analysis and web analytics tools, ensuring data integrity and system reliability.',
+            'Delivered new features and improvements to a large-scale web application used to deliver school lunches to dozens of schools across the country.',
+            'Developed and maintained internal tools and admin panels for a large Louisiana-based internet service provider, improving operational efficiency.',
         ],
         technologies: ['Laravel', 'PHP', 'TypeScript', 'Vue', 'MySQL'],
     },
@@ -58,13 +53,13 @@ export const professionalExperiences: ProfessionalExperience[] = [
         startDate: '2020-01',
         endDate: '2021-11',
         location: 'Springfield, MO',
-        companySize: 'medium',
-        description: 'Led full-stack development of customer-facing web applications serving 100K+ users. Collaborated with cross-functional teams to deliver high-quality software solutions and mentor junior developers.',
+        companySize: 'small',
+        description:
+            'Developed and maintained web applications serving 25,000+ students and faculty at MSU. Collaborated with cross-functional teams to modernize legacy systems and enhance user experience.',
         keyAchievements: [
-            'Architected and built a new customer portal that increased user engagement by 40%',
-            'Reduced application load times by 60% through performance optimization initiatives',
-            'Mentored 3 junior developers and led code review processes for the team',
-            'Implemented automated testing suite that reduced bugs in production by 35%'
+            'Engineered and executed a custom migration script to seamlessly transfer 50,000+ digital assets from legacy to modern CMS platform.',
+            'Assisted in major improvements and upgrades to the campus shuttle tracking system used by the campus community.',
+            'Upgraded the campus welcome center panel system to provide a more intuitive and user-friendly experience.',
         ],
         technologies: ['.NET', 'C#', 'React', 'JavaScript', 'HTML', 'CSS'],
     },

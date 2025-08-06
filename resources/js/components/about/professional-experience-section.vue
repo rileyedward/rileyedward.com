@@ -175,7 +175,10 @@ const experienceStats = computed(() => calculateExperience());
                     @click.stop
                 >
                     <!-- Key Achievements -->
-                    <div class="mb-8">
+                    <div
+                        v-if="professionalExperiences[activeExperienceIndex]?.keyAchievements?.length"
+                        class="mb-8"
+                    >
                         <h4 class="mb-4 text-xl font-semibold text-white">Key Achievements</h4>
                         <ul class="space-y-3">
                             <li

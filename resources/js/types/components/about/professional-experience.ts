@@ -7,7 +7,7 @@ export interface ProfessionalExperience {
     location: string;
     companySize: 'startup' | 'small' | 'medium' | 'large' | 'enterprise';
     description: string;
-    keyAchievements: string[];
+    keyAchievements?: string[] | null;
     technologies: string[];
 }
 
