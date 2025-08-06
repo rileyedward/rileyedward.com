@@ -85,12 +85,11 @@ export const getCompanySizeLabel = (size: ProfessionalExperience['companySize'])
 export const calculateExperience = (): { totalYears: number; totalMonths: number } => {
     let totalMonths = 0;
 
-    professionalExperiences.forEach(exp => {
+    professionalExperiences.forEach((exp) => {
         const startDate = new Date(exp.startDate);
         const endDate = exp.endDate ? new Date(exp.endDate) : new Date();
 
-        const monthsDiff = (endDate.getFullYear() - startDate.getFullYear()) * 12 +
-                          (endDate.getMonth() - startDate.getMonth());
+        const monthsDiff = (endDate.getFullYear() - startDate.getFullYear()) * 12 + (endDate.getMonth() - startDate.getMonth());
 
         totalMonths += monthsDiff;
     });
