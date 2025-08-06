@@ -47,8 +47,8 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <section class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden">
-        <div class="z-10 mb-24 px-6 text-center">
+    <section class="relative flex min-h-[85vh] flex-col items-center justify-center overflow-hidden">
+        <div class="z-10 mb-16 px-6 text-center">
             <div class="mb-4 overflow-hidden">
                 <h1
                     class="text-4xl font-bold tracking-tight transition-transform duration-1000 ease-out md:text-6xl"
@@ -90,7 +90,7 @@ onUnmounted(() => {
             </div>
         </div>
 
-        <div class="absolute right-0 bottom-8 left-0 z-10 flex justify-center opacity-50">
+        <div class="absolute right-0 bottom-12 left-0 z-10 flex justify-center opacity-50">
             <div class="flex space-x-2">
                 <div class="h-1 w-16 bg-purple-500"></div>
                 <div class="h-1 w-4 bg-white"></div>

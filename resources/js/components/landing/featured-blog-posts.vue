@@ -33,7 +33,7 @@ const excerpt = computed((): string => {
 </script>
 
 <template>
-    <section v-if="props.blogPosts.length > 0" class="px-6 py-16">
+    <section v-if="props.blogPosts.length > 0" class="px-6 py-20">
         <div class="container mx-auto max-w-6xl">
             <div class="mb-12 text-center">
                 <h2 class="mb-4 text-3xl font-bold text-white md:text-4xl">Recent <span class="text-purple-400">Blog Posts</span></h2>

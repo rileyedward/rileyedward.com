@@ -23,7 +23,7 @@ const technologies = [
 </script>
 
 <template>
-    <section class="py-12 bg-[#1a1a1a]">
+    <section class="py-20 bg-[#1a1a1a]">
         <div class="container mx-auto max-w-6xl px-6">
             <div class="mb-8 text-center">
                 <h2 class="mb-3 text-2xl font-bold text-white md:text-3xl">
