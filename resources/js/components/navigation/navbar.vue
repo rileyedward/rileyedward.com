@@ -72,7 +72,7 @@ onUnmounted(() => {
 
             <div class="hidden md:flex md:space-x-12">
                 <a :href="route('about.index')" class="transition-colors duration-300 hover:text-cyan-400">About</a>
-                <a href="https://github.com/rileyedward" target="_blank" class="transition-colors duration-300 hover:text-cyan-400">Portfolio</a>
+                <a :href="route('portfolio.index')" target="_blank" class="transition-colors duration-300 hover:text-cyan-400">Portfolio</a>
                 <a :href="route('blog.index')" class="transition-colors duration-300 hover:text-cyan-400">Blog</a>
             </div>
 
