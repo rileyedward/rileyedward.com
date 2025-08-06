@@ -70,8 +70,7 @@ const experienceStats = computed(() => calculateExperience());
 
 <template>
     <section id="professional-experience-section" class="bg-[#111] py-16">
-        <div class="container mx-auto max-w-7xl px-4">
-            <!-- Section Header -->
+        <div class="container mx-auto max-w-6xl px-4">
             <div
                 class="mb-12 transition-all duration-1000 ease-out"
                 :class="sectionVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
@@ -86,7 +85,6 @@ const experienceStats = computed(() => calculateExperience());
                 </div>
             </div>
 
-            <!-- Tab Navigation -->
             <div class="mb-8">
                 <div class="flex flex-wrap gap-2">
                     <button

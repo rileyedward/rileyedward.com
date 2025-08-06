@@ -48,7 +48,7 @@ onUnmounted(() => {
 
 <template>
     <section class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden">
-        <div class="z-10 px-6 mb-24 text-center">
+        <div class="z-10 mb-24 px-6 text-center">
             <div class="mb-4 overflow-hidden">
                 <h1
                     class="text-4xl font-bold tracking-tight transition-transform duration-1000 ease-out md:text-6xl"

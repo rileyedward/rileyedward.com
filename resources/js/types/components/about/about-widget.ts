@@ -11,5 +11,5 @@ export interface Props {
     icon: LucideIcon;
     title: string;
     message: string;
-    href?: string;
+    href?: string | null;
 }

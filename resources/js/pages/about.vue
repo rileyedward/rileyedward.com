@@ -9,8 +9,8 @@ import AppLayout from '@/layouts/app-layout.vue';
 <template>
     <app-layout page-title="About" :always-show-navbar="true">
         <about-hero />
-        <professional-experience-section />
         <about-timeline />
+        <professional-experience-section />
         <about-widgets-section />
     </app-layout>
 </template>

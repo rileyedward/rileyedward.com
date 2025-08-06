@@ -3,16 +3,20 @@ import { timelineItems } from './about-timeline.config';
 </script>
 
 <template>
-    <section class="bg-[#111] pt-24 pb-16">
+    <section class="mx-auto max-w-6xl bg-[#111] pt-24 pb-16">
         <div class="container mx-auto px-4">
-            <div class="mb-16 text-center">
-                <h2 class="mb-2 text-3xl font-bold text-white">My Journey</h2>
-                <div class="flex justify-center">
-                    <div class="h-1 w-16 bg-cyan-500 opacity-80"></div>
+            <div class="mb-12 transition-all duration-1000 ease-out">
+                <div class="flex items-end justify-between border-b border-gray-700 pb-6">
+                    <div>
+                        <h2 class="text-3xl font-bold text-white md:text-4xl">My <span class="text-purple-400">Journey</span></h2>
+                        <p class="mt-2 max-w-2xl text-lg text-gray-400">
+                            A chronological overview of my professional growth, key milestones, and experiences in software development
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div class="mx-auto max-w-5xl">
+            <div class="mx-auto">
                 <div v-for="(item, index) in timelineItems" :key="index" class="mb-24 last:mb-0">
                     <div class="flex flex-col md:flex-row" :class="{ 'md:flex-row-reverse': item.align === 'right' }">
                         <div class="hidden justify-center md:flex md:w-1/12">
