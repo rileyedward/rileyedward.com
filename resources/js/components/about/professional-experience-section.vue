@@ -91,11 +91,11 @@ const experienceStats = computed(() => calculateExperience());
                         v-for="(experience, index) in professionalExperiences"
                         :key="experience.id"
                         @click="setActiveExperience(index)"
-                        class="rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200"
+                        class="cursor-pointer rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200"
                         :class="
                             activeExperienceIndex === index
                                 ? 'bg-purple-600 text-white shadow-lg'
-                                : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
+                                : 'bg-[#1a1a1a] text-gray-300 hover:bg-gray-800 hover:text-white'
                         "
                     >
                         {{ experience.company }}
@@ -106,7 +106,7 @@ const experienceStats = computed(() => calculateExperience());
             <!-- Active Experience Details -->
             <div
                 v-if="professionalExperiences[activeExperienceIndex]"
-                class="animate-fadeIn cursor-pointer rounded-xl border border-gray-800 bg-gray-900 p-8 transition-all duration-300 hover:border-purple-500"
+                class="animate-fadeIn cursor-pointer rounded-xl bg-[#1a1a1a] p-8 transition-all duration-300 hover:border-purple-500"
                 @click="toggleExpansion"
             >
                 <div class="mb-6">

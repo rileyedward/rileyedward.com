@@ -66,7 +66,7 @@ const filterByCategory = (category: string): void => {
                         'rounded-full px-6 py-2 font-medium transition-all duration-300',
                         !selectedCategory
                             ? 'bg-purple-600 text-white shadow-lg'
-                            : 'bg-gray-800 text-gray-300 shadow-md hover:bg-gray-700 hover:shadow-lg',
+                            : 'bg-[#1a1a1a] text-gray-300 shadow-md hover:bg-gray-800 hover:shadow-lg',
                     ]"
                 >
                     All
@@ -79,7 +79,7 @@ const filterByCategory = (category: string): void => {
                         'rounded-full px-6 py-2 font-medium transition-all duration-300',
                         selectedCategory === category.name
                             ? 'bg-purple-600 text-white shadow-lg'
-                            : 'bg-gray-800 text-gray-300 shadow-md hover:bg-gray-700 hover:shadow-lg',
+                            : 'bg-[#1a1a1a] text-gray-300 shadow-md hover:bg-gray-800 hover:shadow-lg',
                     ]"
                 >
                     {{ category.name }}
@@ -95,7 +95,7 @@ const filterByCategory = (category: string): void => {
                     class="transition-all duration-700 ease-out"
                     :class="categoriesVisible[categoryIndex] ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
                 >
-                    <div :class="['rounded-xl border-2 p-6 transition-all duration-300 hover:shadow-xl', getCategoryColor(category.color)]">
+                    <div :class="['rounded-xl border-2 bg-none p-6 transition-all duration-300 hover:shadow-xl', getCategoryColor(category.color)]">
                         <!-- Category Header -->
                         <div class="mb-6">
                             <h3 class="mb-2 text-2xl font-bold text-white">
@@ -109,7 +109,7 @@ const filterByCategory = (category: string): void => {
                             <div
                                 v-for="tech in category.items"
                                 :key="tech.name"
-                                class="rounded-lg bg-gray-800 p-4 shadow-sm transition-all duration-300 hover:bg-gray-700 hover:shadow-md"
+                                class="rounded-lg bg-[#1a1a1a] p-4 shadow-sm transition-all duration-300 hover:bg-gray-900 hover:shadow-md"
                             >
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center gap-3">

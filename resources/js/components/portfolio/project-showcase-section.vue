@@ -64,7 +64,7 @@ const selectProject = (project: Project): void => {
                     :class="projectsVisible[projectIndex] ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
                 >
                     <div
-                        class="group cursor-pointer rounded-xl border border-gray-800 bg-gray-900 p-6 transition-all duration-300 hover:border-purple-500 hover:shadow-xl"
+                        class="group cursor-pointer rounded-xl border border-gray-800 bg-[#1a1a1a] p-6 transition-all duration-300 hover:border-purple-500 hover:shadow-xl"
                         @click="selectProject(project)"
                     >
                         <!-- Project Header -->
@@ -98,11 +98,11 @@ const selectProject = (project: Project): void => {
                             <span
                                 v-for="tech in project.technologies.slice(0, 4)"
                                 :key="tech.name"
-                                class="rounded-full bg-gray-800 px-2 py-1 text-xs text-gray-300"
+                                class="rounded-full bg-gray-700 px-2 py-1 text-xs text-gray-300"
                             >
                                 {{ tech.name }}
                             </span>
-                            <span v-if="project.technologies.length > 4" class="rounded-full bg-gray-800 px-2 py-1 text-xs text-gray-400">
+                            <span v-if="project.technologies.length > 4" class="rounded-full bg-gray-700 px-2 py-1 text-xs text-gray-400">
                                 +{{ project.technologies.length - 4 }} more
                             </span>
                         </div>
