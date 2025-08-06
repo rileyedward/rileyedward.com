@@ -40,18 +40,19 @@ const filterByCategory = (category: string): void => {
 </script>
 
 <template>
-    <section id="tech-stack-section" class="bg-[#111] py-24">
+    <section id="tech-stack-section" class="bg-[#111] py-16 pb-8">
         <div class="container mx-auto max-w-7xl px-4">
             <!-- Section Header -->
             <div
-                class="mb-16 text-center transition-all duration-1000 ease-out"
+                class="mb-12 transition-all duration-1000 ease-out"
                 :class="sectionVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
             >
-                <h2 class="mb-4 text-4xl font-bold text-white md:text-5xl">My <span class="text-purple-400">Tech Stack</span></h2>
-                <p class="mx-auto max-w-3xl text-xl text-gray-300">
-                    The technologies and tools I use to bring ideas to life. From frontend frameworks to cloud infrastructure, here's what powers my
-                    development workflow.
-                </p>
+                <div class="flex items-end justify-between border-b border-gray-700 pb-6">
+                    <div>
+                        <h2 class="text-3xl font-bold text-white md:text-4xl">My <span class="text-purple-400">Tech Stack</span></h2>
+                        <p class="mt-2 max-w-2xl text-lg text-gray-400">Technologies and tools I use to build solutions</p>
+                    </div>
+                </div>
             </div>
 
             <!-- Category Filter Buttons -->
