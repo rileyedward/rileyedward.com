@@ -170,16 +170,16 @@ export const getLevelColor = (level: TechStackItem['level']): string => {
 export const getCategoryColor = (color: string): string => {
     switch (color) {
         case 'purple':
-            return 'border-purple-500 bg-gray-900/50';
+            return 'border-purple-500';
         case 'blue':
-            return 'border-blue-500 bg-gray-900/50';
+            return 'border-blue-500';
         case 'green':
-            return 'border-green-500 bg-gray-900/50';
+            return 'border-green-500';
         case 'cyan':
-            return 'border-cyan-500 bg-gray-900/50';
+            return 'border-cyan-500';
         case 'orange':
-            return 'border-orange-500 bg-gray-900/50';
+            return 'border-orange-500';
         default:
-            return 'border-gray-500 bg-gray-900/50';
+            return 'border-gray-500';
     }
 };
