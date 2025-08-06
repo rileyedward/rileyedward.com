@@ -11,7 +11,7 @@ defineProps<Props>();
 <template>
     <app-layout page-title="Home">
         <landing-splash />
-        
+
         <tech-stack-banner />
 
         <featured-blog-posts :blog-posts="recentBlogPosts" />

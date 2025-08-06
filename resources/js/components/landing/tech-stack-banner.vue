@@ -23,21 +23,19 @@ const technologies = [
 </script>
 
 <template>
-    <section class="py-20 bg-[#1a1a1a]">
+    <section class="bg-[#1a1a1a] py-20">
         <div class="container mx-auto max-w-6xl px-6">
             <div class="mb-8 text-center">
-                <h2 class="mb-3 text-2xl font-bold text-white md:text-3xl">
-                    My <span class="text-cyan-400">Tech</span>
-                </h2>
-                <p class="text-gray-300">
-                    My recent favorite tools and technologies
-                </p>
+                <h2 class="mb-3 text-2xl font-bold text-white md:text-3xl">My <span class="text-cyan-400">Tech</span></h2>
+                <p class="text-gray-300">My recent favorite tools and technologies</p>
             </div>
 
             <div class="relative overflow-hidden">
-                <div class="flex animate-scroll space-x-12 md:space-x-16">
-                    <div v-for="tech in technologies" :key="`first-${tech.name}`" class="flex flex-shrink-0 flex-col items-center group">
-                        <div class="mb-3 rounded-lg bg-black/50 p-4 transition-all duration-300 hover:bg-black/50 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20">
+                <div class="animate-scroll flex space-x-12 md:space-x-16">
+                    <div v-for="tech in technologies" :key="`first-${tech.name}`" class="group flex flex-shrink-0 flex-col items-center">
+                        <div
+                            class="mb-3 rounded-lg bg-black/50 p-4 transition-all duration-300 hover:scale-110 hover:bg-black/50 hover:shadow-lg hover:shadow-cyan-500/20"
+                        >
                             <component :is="tech.icon" class="h-12 w-12 opacity-80 transition-opacity duration-300 group-hover:opacity-100" />
                         </div>
                         <span class="text-sm font-medium text-gray-400 transition-colors duration-300 group-hover:text-white">
@@ -45,8 +43,10 @@ const technologies = [
                         </span>
                     </div>
 
-                    <div v-for="tech in technologies" :key="`second-${tech.name}`" class="flex flex-shrink-0 flex-col items-center group">
-                        <div class="mb-3 rounded-lg bg-black/50 p-4 transition-all duration-300 hover:bg-black/50 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20">
+                    <div v-for="tech in technologies" :key="`second-${tech.name}`" class="group flex flex-shrink-0 flex-col items-center">
+                        <div
+                            class="mb-3 rounded-lg bg-black/50 p-4 transition-all duration-300 hover:scale-110 hover:bg-black/50 hover:shadow-lg hover:shadow-cyan-500/20"
+                        >
                             <component :is="tech.icon" class="h-12 w-12 opacity-80 transition-opacity duration-300 group-hover:opacity-100" />
                         </div>
                         <span class="text-sm font-medium text-gray-400 transition-colors duration-300 group-hover:text-white">
