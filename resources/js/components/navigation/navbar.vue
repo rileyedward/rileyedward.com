@@ -105,8 +105,7 @@ onUnmounted(() => {
                     >About</a
                 >
                 <a
-                    href="https://github.com/rileyedward"
-                    target="_blank"
+                    :href="route('portfolio.index')"
                     class="border-b border-gray-800/30 py-4 text-lg font-medium transition-colors duration-300 hover:text-cyan-400 active:bg-gray-800/20"
                     @click="closeMobileMenu"
                     >Portfolio</a

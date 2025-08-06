@@ -48,7 +48,7 @@ onUnmounted(() => {
 
 <template>
     <section class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden">
-        <div class="z-10 px-6 text-center">
+        <div class="z-10 px-6 mb-24 text-center">
             <div class="mb-4 overflow-hidden">
                 <h1
                     class="text-4xl font-bold tracking-tight transition-transform duration-1000 ease-out md:text-6xl"
@@ -85,7 +85,7 @@ onUnmounted(() => {
                     :href="route('about.index')"
                     class="inline-flex items-center gap-2 rounded-lg border-2 border-white bg-transparent px-6 py-3 font-semibold tracking-wide text-white shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:border-white hover:bg-white hover:text-gray-900 hover:shadow-xl"
                 >
-                    `Get to know me`
+                    Get to know me
                 </inertia-link>
             </div>
         </div>
