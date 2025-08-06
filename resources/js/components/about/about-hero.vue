@@ -70,21 +70,10 @@ const handleScrollDown = (): void => {
 
             <div class="overflow-hidden">
                 <div class="transition-all duration-700" :class="techVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'">
-                    <div class="mb-2 text-lg font-medium text-white">My Current Stack</div>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            v-for="(tech, index) in techStack"
-                            :key="index"
-                            class="bg-opacity-30 rounded-full bg-purple-500 px-3 py-1 text-sm text-white"
-                        >
-                            {{ tech }}
-                        </span>
-                    </div>
-
-                    <div class="mt-8">
+                    <div>
                         <button
                             @click="handleScrollDown"
-                            class="inline-flex items-center gap-2 rounded-lg border-2 border-white bg-transparent px-6 py-3 font-semibold tracking-wide text-white shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:border-white hover:bg-white hover:text-gray-900 hover:shadow-xl"
+                            class="inline-flex cursor-pointer items-center gap-2 rounded-lg border-2 border-white bg-transparent px-6 py-3 font-semibold tracking-wide text-white shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:border-white hover:bg-white hover:text-gray-900 hover:shadow-xl"
                         >
                             Learn More
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
