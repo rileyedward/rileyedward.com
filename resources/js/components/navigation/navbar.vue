@@ -67,7 +67,7 @@ onUnmounted(() => {
     >
         <div class="container mx-auto flex items-center justify-between px-4 py-4">
             <div class="text-xl font-bold">
-                <a :href="route('home')" class="transition-colors duration-300 hover:text-purple-400">Riley Edward</a>
+                <a :href="route('home')" class="transition-colors duration-300 hover:text-purple-400">Riley Edward.</a>
             </div>
 
             <div class="hidden md:flex md:space-x-12">

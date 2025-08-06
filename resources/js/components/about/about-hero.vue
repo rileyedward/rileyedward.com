@@ -84,7 +84,7 @@ const handleScrollDown = (): void => {
                     <div class="mt-8">
                         <button
                             @click="handleScrollDown"
-                            class="inline-flex items-center gap-2 rounded-lg border-2 border-white px-6 py-3 font-medium tracking-wide text-white shadow-md transition-all duration-300 ease-in-out hover:border-transparent hover:bg-gradient-to-r hover:from-purple-500 hover:to-cyan-400 hover:text-white"
+                            class="inline-flex items-center gap-2 rounded-lg border-2 border-white bg-transparent px-6 py-3 font-semibold tracking-wide text-white shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:border-white hover:bg-white hover:text-gray-900 hover:shadow-xl"
                         >
                             Learn More
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
