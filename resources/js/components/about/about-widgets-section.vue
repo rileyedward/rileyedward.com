@@ -13,6 +13,7 @@ import { aboutWidgets } from './about-widgets.config';
                     :icon="widget.icon"
                     :title="widget.title"
                     :message="widget.message"
+                    :href="widget.href"
                 />
             </div>
         </div>
