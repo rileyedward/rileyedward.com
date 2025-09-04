@@ -2,6 +2,17 @@ import type { ProfessionalExperience } from '@/types/components/about/profession
 
 export const professionalExperiences: ProfessionalExperience[] = [
     {
+        id: 'schier-products',
+        company: 'Schier Products',
+        position: 'Software Engineer II',
+        startDate: '2025-09',
+        location: 'Shawnee, KS',
+        companySize: 'medium',
+        description:
+            'Developing and maintaining enterprise software solutions using modern web technologies. Collaborating with cross-functional teams to design, implement, and optimize applications that drive business efficiency and enhance customer experience.',
+        technologies: ['Laravel', 'PHP', 'TypeScript', 'Vue', 'PostgreSQL', 'AWS'],
+    },
+    {
         id: 'active-logic',
         company: 'Active Logic',
         position: 'Software Engineer',
