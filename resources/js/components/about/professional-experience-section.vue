@@ -98,7 +98,7 @@ const experienceStats = computed(() => calculateExperience());
                                 : 'bg-[#1a1a1a] text-gray-300 hover:bg-gray-800 hover:text-white'
                         "
                     >
-                        {{ experience.company }}
+                        {{ experience.companyShort }}
                     </button>
                 </div>
             </div>

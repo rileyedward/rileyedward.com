@@ -11,26 +11,26 @@ export const aboutWidgets: AboutWidget[] = [
     {
         icon: KeyboardIcon,
         title: 'Fastest WPM',
-        message: '164',
+        message: '187 WPM',
         href: 'https://monkeytype.com/profile/rileyedward',
     },
     {
         icon: DollarSignIcon,
-        title: 'Favorite Hobby',
+        title: 'Current Hobby',
         message: 'Poker',
         href: null,
     },
     {
         icon: HeadphonesIcon,
         title: 'On Repeat',
-        message: 'Big Thief - Shark Smile',
-        href: 'https://open.spotify.com/album/6I4gdKmXKdh6SP1yRlrQGD',
+        message: 'The Beatles - Abbey Road',
+        href: 'https://music.apple.com/us/album/abbey-road-remastered/1441164426',
     },
     {
         icon: GamepadIcon,
         title: 'Currently Playing',
-        message: 'Elden Ring Nightreign',
-        href: 'https://store.steampowered.com/app/2622380/ELDEN_RING_NIGHTREIGN/',
+        message: 'no Man\'s Sky',
+        href: 'https://www.nomanssky.com/',
     },
     {
         icon: BookIcon,

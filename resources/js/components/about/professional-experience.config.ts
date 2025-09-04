@@ -4,6 +4,7 @@ export const professionalExperiences: ProfessionalExperience[] = [
     {
         id: 'schier-products',
         company: 'Schier Products',
+        companyShort: 'Schier',
         position: 'Software Engineer II',
         startDate: '2025-09',
         location: 'Shawnee, KS',
@@ -15,6 +16,7 @@ export const professionalExperiences: ProfessionalExperience[] = [
     {
         id: 'active-logic',
         company: 'Active Logic',
+        companyShort: 'Active Logic',
         position: 'Software Engineer',
         startDate: '2025-01',
         endDate: '2025-08',
@@ -31,6 +33,7 @@ export const professionalExperiences: ProfessionalExperience[] = [
     {
         id: 'empower-fresh',
         company: 'Empower Fresh',
+        companyShort: 'Empower Fresh',
         position: 'Software Engineer',
         startDate: '2024-08',
         endDate: '2025-01',
@@ -48,6 +51,7 @@ export const professionalExperiences: ProfessionalExperience[] = [
     {
         id: 'midwestern-interactive',
         company: 'Midwestern Interactive',
+        companyShort: 'Midwestern',
         position: 'Software Engineer',
         startDate: '2021-11',
         endDate: '2024-08',
@@ -65,6 +69,7 @@ export const professionalExperiences: ProfessionalExperience[] = [
     {
         id: 'missouri-state-university',
         company: 'Missouri State University',
+        companyShort: 'MSU',
         position: 'Web Developer',
         startDate: '2020-01',
         endDate: '2021-11',

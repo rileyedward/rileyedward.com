@@ -1,6 +1,7 @@
 export interface ProfessionalExperience {
     id: string;
     company: string;
+    companyShort: string;
     position: string;
     startDate: string;
     endDate?: string;
