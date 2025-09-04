@@ -36,15 +36,20 @@ export const timelineItems: TimelineItem[] = [
         title: 'What about now?',
         subtitle: '2024 - Today',
         description: `
-            In 2024, I moved back to Kansas City to begin a new chapter in my career. I started working
-            for a local startup, where I was able to contribute to a fast-moving product team and gain
-            valuable experience in a lean, iterative environment.
+            In 2024, I moved back to Kansas City to begin a new chapter in my career. I started at
+            Empower Fresh, a local startup, where I contributed to a fast-moving product team and gained
+            valuable experience in a lean, iterative environment while wearing multiple hats across
+            development, DevOps, and customer success.
 
-            Since then, I’ve transitioned into a role where I build custom applications from the ground
-            up for clients—much like the work I loved doing early on. From initial planning to final
-            deployment, I’m responsible for delivering full-stack solutions that are clean, scalable,
-            and tailored to each project's goals. I'm still working mostly with Laravel, Vue, and Inertia,
-            and constantly refining my approach to software that’s both beautiful and effective.
+            After my time at Empower Fresh, I joined Active Logic, where I engineered sophisticated web
+            applications for clients using cutting-edge technology stacks. I led critical components in
+            innovative projects and collaborated effectively with cross-functional teams to deliver
+            robust, scalable solutions.
+
+            Currently, I'm at Schier Products as a Software Engineer II, developing and maintaining
+            enterprise software solutions. I'm leveraging modern web technologies and collaborating with
+            cross-functional teams to design, implement, and optimize applications that drive business
+            efficiency and enhance customer experience.
         `,
         align: 'left',
     },
