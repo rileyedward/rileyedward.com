@@ -19,7 +19,7 @@ const isClickable = props.href && props.href.trim() !== '';
             <div class="mr-2 text-white">
                 <component :is="icon" class="h-5 w-5" />
             </div>
-            <h3 class="text-lg font-bold text-white">{{ title }} <ExternalLinkIcon v-if="isClickable" class="inline h-3 w-3 ml-1" /></h3>
+            <h3 class="text-lg font-bold text-white">{{ title }} <ExternalLinkIcon v-if="isClickable" class="ml-1 inline h-3 w-3" /></h3>
         </div>
         <p class="text-purple-100">{{ message }}</p>
     </component>

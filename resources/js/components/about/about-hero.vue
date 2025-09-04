@@ -3,7 +3,7 @@ import TechPattern from '@/components/background/tech-pattern.vue';
 import { onMounted, ref } from 'vue';
 import { aboutHeroConfig } from './about-hero.config';
 
-const { role, description, techStack } = aboutHeroConfig;
+const { role, description } = aboutHeroConfig;
 
 const titleVisible = ref(false);
 const roleVisible = ref(false);

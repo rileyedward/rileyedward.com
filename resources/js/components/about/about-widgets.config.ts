@@ -29,7 +29,7 @@ export const aboutWidgets: AboutWidget[] = [
     {
         icon: GamepadIcon,
         title: 'Currently Playing',
-        message: 'no Man\'s Sky',
+        message: "no Man's Sky",
         href: 'https://www.nomanssky.com/',
     },
     {

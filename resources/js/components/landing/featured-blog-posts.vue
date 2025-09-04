@@ -42,7 +42,7 @@ const excerpt = computed((): string => {
             <div class="relative">
                 <div class="relative overflow-hidden rounded-lg bg-[#1a1a1a] shadow-2xl">
                     <div class="flex transition-transform duration-500 ease-in-out" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
-                        <div v-for="(post, index) in props.blogPosts" :key="post.id" class="w-full flex-shrink-0">
+                        <div v-for="post in props.blogPosts" :key="post.id" class="w-full flex-shrink-0">
                             <div class="p-8 lg:p-12">
                                 <div v-if="post.category" class="mb-4">
                                     <span class="inline-block rounded-md bg-cyan-900 px-3 py-1 text-sm font-medium text-cyan-200">
