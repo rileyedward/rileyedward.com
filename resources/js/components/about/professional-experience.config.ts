@@ -6,10 +6,15 @@ export const professionalExperiences: ProfessionalExperience[] = [
         company: 'Active Logic',
         position: 'Software Engineer',
         startDate: '2025-01',
+        endDate: '2025-08',
         location: 'Kansas City, MO',
         companySize: 'small',
         description:
-            'Currently developing and maintaining custom web applications for clients using modern technology stack. Collaborating with cross-functional teams to deliver high-quality software solutions.',
+            'Engineered and maintained sophisticated web applications for clients utilizing cutting-edge technology stacks. Collaborated effectively with cross-functional teams to deliver robust, scalable software solutions that exceeded client expectations.',
+        keyAchievements: [
+            'Led critical components in the development of an innovative Document Management System platform tailored for agriculture and power tool manufacturing sectors.',
+            'Planned and designed the structure for a full-stack project skeleton to use as a template starter kit internally.',
+        ],
         technologies: ['Laravel', 'PHP', 'TypeScript', 'Vue', 'PostgreSQL'],
     },
     {
