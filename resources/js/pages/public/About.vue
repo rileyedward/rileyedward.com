@@ -65,9 +65,14 @@ const principles = [
                     Now
                 </p>
                 <h2 class="mt-2 text-lg font-semibold">
-                    Software Engineer II at Schier Products
+                    Software Engineer at Schier Products
                 </h2>
                 <p class="text-sm text-muted-foreground">Shawnee, KS</p>
+                <p class="mt-3 text-muted-foreground">
+                    Schier Products manufactures grease interceptors for
+                    commercial kitchens, backed by a lifetime guarantee and used
+                    in food service establishments of every size.
+                </p>
                 <!-- TODO(Riley): one or two sentences on your Schier work. -->
                 <p class="mt-3 text-muted-foreground">
                     Building and maintaining the internal and customer-facing

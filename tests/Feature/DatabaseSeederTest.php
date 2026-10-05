@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Models\Project;
+use App\Models\Setting;
 use Database\Seeders\AdminSeeder;
 use Database\Seeders\DatabaseSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -33,5 +34,18 @@ class DatabaseSeederTest extends TestCase
         $this->app->make(AdminSeeder::class)->run();
 
         $this->assertDatabaseMissing('users', ['email' => 'admin@test.com']);
+    }
+
+    public function test_the_content_migration_seeds_settings_and_projects_but_not_an_admin()
+    {
+        $migration = require database_path('migrations/2026_10_05_182639_seed_initial_site_content.php');
+
+        $this->app['env'] = 'local';
+        $migration->up();
+        $this->app['env'] = 'testing';
+
+        $this->assertSame(15, Project::query()->count());
+        $this->assertSame(5, Setting::query()->count());
+        $this->assertDatabaseCount('users', 0);
     }
 }
