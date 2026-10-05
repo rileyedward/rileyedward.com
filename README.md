@@ -1,65 +1,44 @@
 # rileyedward.com
 
-My personal website.
+Freelance site for Riley Edward, a Kansas City Laravel developer: public pages, a project showcase driven by the database, and a contact form that feeds a private admin inbox.
 
-## Getting Started
+Built on the official Laravel Vue starter kit: Laravel 13, Inertia 3 (with SSR), Vue 3, TypeScript, Tailwind v4, Fortify, Wayfinder and Pest.
 
-### Prerequisites
+## Local setup
 
-Ensure you have the following prerequisites installed on your system:
+Requirements: PHP 8.3+, Composer, Node 22+ (20 works), and [Herd](https://herd.laravel.com) (or `php artisan serve`).
 
-1. **PHP 8.2+**
-2. **Composer**
-3. **PostgreSQL**
-4. **Node.js** and **NPM**
+```bash
+composer setup                 # install, .env, key, migrate, npm install, build
+php artisan db:seed            # projects + site settings
+php artisan storage:link       # serve uploaded cover images
+php artisan app:create-admin   # your admin login (prompts for name/email/password)
+herd link rileyedward          # http://rileyedward.test
+composer dev                   # Vite, queue and logs with hot reload
+```
 
-### Installation
+Local development uses SQLite (`database/database.sqlite`, `APP_URL=http://rileyedward.test`). CI and production run PostgreSQL; a commented `pgsql` block in `.env.example` shows the variables.
 
-1. Duplicate the example environment file and configure it with your settings:
+## Admin
 
-   ```bash
-   cp .env.example .env
-   ```
+Sign in at `/login` (not linked anywhere public). Registration and password reset are disabled; create users with `php artisan app:create-admin`.
 
-2. Install PHP and JavaScript dependencies:
+- **Inbox** (`/admin/inbox`): contact form inquiries. Nothing is emailed; reply from your mail app.
+- **Projects** (`/admin/projects`): drag to reorder, toggle Visible / Featured, edit copy in markdown, upload a cover screenshot (stored as WebP).
+- **Site settings** (`/admin/site-settings`): availability line, public email, GitHub and LinkedIn URLs, career start year.
 
-   ```bash
-   composer install
-   npm install
-   ```
+## Configuration
 
-3. Generate a new PHP application key:
+| Variable | Purpose |
+| --- | --- |
+| `MEDIA_DISK` | Filesystem disk for cover images. `public` locally; the Cloud object storage disk in production. |
 
-   ```bash
-   php artisan key:generate
-   ```
+Accent presets live in `resources/css/app.css` (`[data-accent]` blocks) and `app/Enums/Accent.php`.
 
-4. Create a new PostgreSQL database:
+## Checks
 
-   ```sql
-   CREATE DATABASE rileyedward
-   ```
+```bash
+composer ci:check   # vp check (lint + format), accent contrast check, vue-tsc, Pint, PHPStan, Pest
+```
 
-5. Apply database migrations:
-
-   ```bash
-   php artisan artisan migrate
-   ```
-
-6. Seed the database with test data:
-
-   ```bash
-    php artisan artisan db:seed
-   ```
-
-7. Serve the PHP application:
-
-    ```bash
-    php artisan serve
-    ```
-
-8. Compile assets and run the Vue frontend:
-
-   ```bash
-   npm run dev
-   ```
+GitHub Actions runs the same command against PostgreSQL on every push to `main` and `rebuild`.
