@@ -21,7 +21,7 @@ class DatabaseSeederTest extends TestCase
             'password' => 'password',
         ])->assertRedirect(route('dashboard', absolute: false));
 
-        $this->assertSame(16, Project::query()->count());
+        $this->assertSame(14, Project::query()->count());
         $this->assertTrue(Project::query()->get()->every(fn (Project $project): bool => mb_strlen($project->summary) <= 160));
         $this->get(route('work.show', 'portal-atlas'))->assertOk();
     }

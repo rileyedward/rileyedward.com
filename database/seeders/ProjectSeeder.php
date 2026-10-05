@@ -27,7 +27,6 @@ class ProjectSeeder extends Seeder
                     MD,
                 'stack' => ['Laravel', 'PHP', 'Vue', 'TypeScript', 'Inertia', 'Pest'],
                 'status' => ProjectStatus::Live,
-                'live_url' => 'https://flashy.gg',
                 'repo_url' => 'https://github.com/rileyedward/pickems',
                 'is_featured' => true,
             ],
@@ -69,43 +68,6 @@ class ProjectSeeder extends Seeder
                 'stack' => ['Nuxt', 'Vue', 'TypeScript', 'Tailwind', 'Vitest'],
                 'status' => ProjectStatus::InProgress,
                 'repo_url' => 'https://github.com/rileyedward/ocarina-of-learning',
-            ],
-            [
-                'title' => 'dotfiles',
-                'slug' => 'dotfiles',
-                'summary' => 'Reproduce a fully configured macOS development machine with a single command.',
-                'body' => <<<'MD'
-                    dotfiles is the source of truth for a macOS development machine's configuration: the zsh setup, the LazyVim config, the Ghostty terminal, git, and the list of applications that make up a working environment. Everything lives in the repo and is symlinked into place, so `git status` is the record of what changed.
-
-                    ## Features
-
-                    - **One-command bootstrap**: takes a brand-new Mac from Xcode Command Line Tools to a working shell.
-                    - **Non-destructive install**: backs up anything it replaces and never deletes a file, with a `--dry-run` preview.
-                    - **Idempotent**: every step checks before it acts, so re-running is always safe.
-                    - **Reproducible Neovim**: a LazyVim setup with its lockfiles committed.
-                    - **No secrets**: git identity goes into an untracked local file; SSH keys and machine IDs are excluded by design.
-                    MD,
-                'stack' => ['Shell', 'Lua', 'Neovim', 'Homebrew'],
-                'status' => ProjectStatus::InProgress,
-                'repo_url' => 'https://github.com/rileyedward/dotfiles',
-            ],
-            [
-                'title' => 'Minecraft Server',
-                'slug' => 'minecraft-server',
-                'summary' => 'A Paper Minecraft server built as the foundation for custom plugin development.',
-                'body' => <<<'MD'
-                    A local [Paper](https://papermc.io/) server set up as the foundation for long-term plugin development. It runs on your machine, loads plugins written in Java, and players connect with an ordinary, unmodified Minecraft client.
-
-                    ## Features
-
-                    - **Custom plugins**: a Gradle project that compiles straight into the server's plugins folder.
-                    - **Community plugins**: drop-in jars from Modrinth or Hangar run alongside your own code.
-                    - **Vanilla clients**: players install nothing; any stock Minecraft client can connect.
-                    - **Simple control**: start and stop scripts, with a guard so two servers never run over the same world.
-                    MD,
-                'stack' => ['Java', 'Paper', 'Gradle', 'Shell'],
-                'status' => ProjectStatus::InProgress,
-                'repo_url' => 'https://github.com/rileyedward/minecraft-server',
             ],
             [
                 'title' => 'Parity',
