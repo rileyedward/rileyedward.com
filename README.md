@@ -10,9 +10,8 @@ Requirements: PHP 8.3+, Composer, Node 22+ (20 works), and [Herd](https://herd.l
 
 ```bash
 composer setup                 # install, .env, key, migrate, npm install, build
-php artisan db:seed            # projects + site settings
+php artisan db:seed            # local admin, site settings, projects from public GitHub repos
 php artisan storage:link       # serve uploaded cover images
-php artisan app:create-admin   # your admin login (prompts for name/email/password)
 herd link rileyedward          # http://rileyedward.test
 composer dev                   # Vite, queue and logs with hot reload
 ```
@@ -21,7 +20,7 @@ Local development uses SQLite (`database/database.sqlite`, `APP_URL=http://riley
 
 ## Admin
 
-Sign in at `/login` (not linked anywhere public). Registration and password reset are disabled; create users with `php artisan app:create-admin`.
+Sign in at `/login` (not linked anywhere public). Locally the seeder creates `admin@test.com` / `password`; it is skipped in production, where you create your account with `php artisan app:create-admin`. Registration and password reset are disabled.
 
 - **Inbox** (`/admin/inbox`): contact form inquiries. Nothing is emailed; reply from your mail app.
 - **Projects** (`/admin/projects`): drag to reorder, toggle Visible / Featured, edit copy in markdown, upload a cover screenshot (stored as WebP).

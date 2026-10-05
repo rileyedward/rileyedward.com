@@ -10,163 +10,308 @@ use Illuminate\Database\Seeder;
 class ProjectSeeder extends Seeder
 {
     /**
-     * Seed the known projects. Riley fills in the remaining copy in the admin.
+     * Seed projects from Riley's public GitHub repositories (github.com/rileyedward),
+     * newest first. Copy comes from each repository's README.
      */
     public function run(): void
     {
         $projects = [
             [
-                'title' => 'Dandelines Design',
-                'slug' => 'dandelines-design',
-                'kind' => ProjectKind::Client,
-                'summary' => 'An event design storefront with a Laravel admin portal and Stripe checkout.',
-                'body' => "TODO: Riley to write up the project.\n\n## The problem\n\n## What I built\n\n## Notable details\n",
-                'role' => null,
-                'stack' => ['Laravel', 'Vue', 'TypeScript', 'Tailwind', 'Stripe'],
+                'title' => "Pick'ems",
+                'slug' => 'pickems',
+                'summary' => "NFL pick'ems for friends: weekly picks, placement points and a season leaderboard.",
+                'body' => <<<'MD'
+                    Pick'ems is a web application for running a weekly NFL pick'ems league with friends. Players register their own accounts, pick a winner for every game before the first kickoff, and earn placement points each week that roll up into a season leaderboard.
+
+                    The season's teams and schedule are pulled from ESPN, and the app runs on Laravel Cloud with profile photos stored on object storage.
+                    MD,
+                'stack' => ['Laravel', 'PHP', 'Vue', 'TypeScript', 'Inertia', 'Pest'],
                 'status' => ProjectStatus::Live,
-                'live_url' => 'https://dandelinesdesign.com',
-                'is_visible' => true,
+                'live_url' => 'https://flashy.gg',
+                'repo_url' => 'https://github.com/rileyedward/pickems',
                 'is_featured' => true,
             ],
             [
-                'title' => 'Lauren Alexandra',
-                'slug' => 'lauren-alexandra',
-                'kind' => ProjectKind::Client,
-                'summary' => 'TODO: one-line summary.',
-                'stack' => ['Laravel', 'Vue'],
-                'status' => ProjectStatus::InProgress,
+                'title' => 'Portal Atlas',
+                'slug' => 'portal-atlas',
+                'summary' => 'An unofficial, community-made interactive map and raid companion for Active Matter.',
+                'body' => <<<'MD'
+                    Portal Atlas is a web application for exploring Active Matter's maps. Players can find extraction points, loot and objectives, look up items and whether to keep them, and plan raid routes.
+
+                    Every data point carries its source, a confidence score and the game version it was verified for, and anyone can report an entry that is wrong.
+
+                    It runs on Laravel Cloud with PostgreSQL, with admin-uploaded map images on object storage. Portal Atlas is not produced, approved or endorsed by Gaijin Entertainment or Matter Team.
+                    MD,
+                'stack' => ['Laravel', 'PHP', 'Vue', 'TypeScript', 'PostgreSQL', 'Python'],
+                'status' => ProjectStatus::Live,
+                'live_url' => 'https://atlas.flashy.gg',
+                'repo_url' => 'https://github.com/rileyedward/portal-atlas',
+                'is_featured' => true,
             ],
             [
-                'title' => 'Applicy',
-                'slug' => 'applicy',
-                'kind' => ProjectKind::Personal,
-                'summary' => 'A job application tracker with AI help for resumes and cover letters.',
+                'title' => 'Ocarina Practice',
+                'slug' => 'ocarina-practice',
+                'summary' => 'Fingering charts and phrase-by-phrase practice for the ocarina, running entirely in the browser.',
                 'body' => <<<'MD'
-                    Applicy is a comprehensive online platform that simplifies your job application process. Create a personalized profile to seamlessly track all your job applications and monitor their progress in real time. With Applicy, you can easily organize your job search efforts, making it simpler to stay on top of your applications and secure your next opportunity.
+                    Ocarina Practice is an application for learning the ocarina: the 12-hole alto C by default, with 6-hole and 4-hole pendants and the soprano and bass alongside it. It shows the fingering for every note an instrument can play, pre-built scale runs for warm-ups, and songs built out of short phrases, a few phrases at a time, while you hold the instrument.
+
+                    Everything runs in the browser as a client-only SPA, with no backend, no database and no account.
 
                     ## Features
 
-                    - Keep track of the job applications you have submitted and the status of each one.
-                    - Upload and store your resumes and get AI recommendations based on the job you're applying for.
-                    - Upload and store your cover letters and have the AI assistant tailor versions for each job.
+                    - **Complete fingering chart**: all 21 notes from A4 to F6, fully chromatic.
+                    - **Five instruments**: 12-hole alto, soprano and bass C, plus 6-hole and 4-hole pendants.
+                    - **Change hints**: each card marks the holes that lift and press against the note before it.
+                    - **Phrase-based practice**: songs are ordered lists of short phrases rather than a wall of notes.
+                    - **Hands-free turning**: a wake lock keeps the screen on, and pages turn on a tap or a timer.
+                    - **Staff notation**: the same phrase on a treble staff, hand-drawn in SVG.
                     MD,
-                'role' => 'Design and full-stack build',
-                'stack' => ['Laravel', 'PHP', 'Vue', 'TypeScript', 'Tailwind', 'PostgreSQL'],
-                'status' => ProjectStatus::Live,
-                'repo_url' => 'https://github.com/rileyedward/applicy',
-                'is_visible' => true,
+                'stack' => ['Nuxt', 'Vue', 'TypeScript', 'Tailwind', 'Vitest'],
+                'status' => ProjectStatus::InProgress,
+                'repo_url' => 'https://github.com/rileyedward/ocarina-of-learning',
+            ],
+            [
+                'title' => 'dotfiles',
+                'slug' => 'dotfiles',
+                'summary' => 'Reproduce a fully configured macOS development machine with a single command.',
+                'body' => <<<'MD'
+                    dotfiles is the source of truth for a macOS development machine's configuration: the zsh setup, the LazyVim config, the Ghostty terminal, git, and the list of applications that make up a working environment. Everything lives in the repo and is symlinked into place, so `git status` is the record of what changed.
+
+                    ## Features
+
+                    - **One-command bootstrap**: takes a brand-new Mac from Xcode Command Line Tools to a working shell.
+                    - **Non-destructive install**: backs up anything it replaces and never deletes a file, with a `--dry-run` preview.
+                    - **Idempotent**: every step checks before it acts, so re-running is always safe.
+                    - **Reproducible Neovim**: a LazyVim setup with its lockfiles committed.
+                    - **No secrets**: git identity goes into an untracked local file; SSH keys and machine IDs are excluded by design.
+                    MD,
+                'stack' => ['Shell', 'Lua', 'Neovim', 'Homebrew'],
+                'status' => ProjectStatus::InProgress,
+                'repo_url' => 'https://github.com/rileyedward/dotfiles',
+            ],
+            [
+                'title' => 'Minecraft Server',
+                'slug' => 'minecraft-server',
+                'summary' => 'A Paper Minecraft server built as the foundation for custom plugin development.',
+                'body' => <<<'MD'
+                    A local [Paper](https://papermc.io/) server set up as the foundation for long-term plugin development. It runs on your machine, loads plugins written in Java, and players connect with an ordinary, unmodified Minecraft client.
+
+                    ## Features
+
+                    - **Custom plugins**: a Gradle project that compiles straight into the server's plugins folder.
+                    - **Community plugins**: drop-in jars from Modrinth or Hangar run alongside your own code.
+                    - **Vanilla clients**: players install nothing; any stock Minecraft client can connect.
+                    - **Simple control**: start and stop scripts, with a guard so two servers never run over the same world.
+                    MD,
+                'stack' => ['Java', 'Paper', 'Gradle', 'Shell'],
+                'status' => ProjectStatus::InProgress,
+                'repo_url' => 'https://github.com/rileyedward/minecraft-server',
+            ],
+            [
+                'title' => 'Parity',
+                'slug' => 'parity',
+                'summary' => "Visual differences for everything that isn't text: compare images, SVG, PDF and DXF side by side.",
+                'body' => <<<'MD'
+                    Parity is a local application for comparing two renderings of the same thing. Point it at two files, or two entire folders, and view them side by side, overlaid, wiped between, or blinked in place, with pan and zoom locked together.
+
+                    Checking that two versions of a drawing match is tedious work. Parity puts both renderings in one shared pixel space so differences are visible directly rather than inferred, and pairs entire folders automatically.
+
+                    ## Features
+
+                    - **File or folder comparison**: pair every file in two folders by path and basename.
+                    - **Structure validation**: orphaned files, missing folders and basename collisions are reported up front.
+                    - **Four compare modes**: side by side, overlay, swipe and blink, sharing one pan/zoom state.
+                    - **Multi-format**: raster images, SVG, PDF and DXF in any combination.
+                    - **Alignment tools**: a per-edge pixel readout of how far the two sides differ.
+                    MD,
+                'stack' => ['Vue', 'JavaScript', 'Vite'],
+                'status' => ProjectStatus::InProgress,
+                'repo_url' => 'https://github.com/rileyedward/parity',
+            ],
+            [
+                'title' => 'Cadence',
+                'slug' => 'cadence',
+                'summary' => 'A life-structure compiler that turns flexible intentions into an adaptive daily timeline.',
+                'body' => <<<'MD'
+                    Cadence turns flexible human intention into an adaptive daily timeline. Instead of scheduling individual tasks, you define recurring routine templates made of time blocks, choose each day what state you'll be in for each block, and let Cadence compile those decisions into a concrete, ordered timeline, with buffers and transitions, that reflows live as your day changes.
+
+                    It ships as a mobile-first, installable PWA.
+
+                    ## Features
+
+                    - **Routine templates**: reusable weekly structures built from ordered time blocks.
+                    - **Daily intents**: pick the behavioral state for each block, like recovery, deep work or movement.
+                    - **Deterministic compiler**: a PHP engine compiles decisions into a versioned timeline; the server is the single source of truth.
+                    - **Live adjustments**: edit your day as it happens and the rest of the timeline reflows.
+                    - **Check-ins and history**: log started, completed or skipped against each block.
+                    - **Google Calendar sync**: optional two-way calendar integration.
+                    MD,
+                'stack' => ['Laravel', 'PHP', 'Vue', 'TypeScript', 'Tailwind', 'Inertia'],
+                'status' => ProjectStatus::InProgress,
+                'repo_url' => 'https://github.com/rileyedward/cadence',
                 'is_featured' => true,
+            ],
+            [
+                'title' => 'MLB Stats Lab',
+                'slug' => 'mlb-stats-lab',
+                'summary' => 'An MLB Statcast analytics playground: pitch-level data, Jupyter notebooks and team-themed PDF reports.',
+                'body' => <<<'MD'
+                    A personal MLB Statcast analytics playground. It pulls pitch-level data via [pybaseball](https://github.com/jldbc/pybaseball), explores it in JupyterLab, and renders polished team-themed PDF reports.
+
+                    A small CLI scaffolds notebooks and renders reports from templates, and notebook templates are authored as plain Python files paired to notebooks with jupytext.
+                    MD,
+                'stack' => ['Python', 'Jupyter', 'pybaseball', 'WeasyPrint'],
+                'status' => ProjectStatus::InProgress,
+                'repo_url' => 'https://github.com/rileyedward/mlb-stats-lab',
+            ],
+            [
+                'title' => 'Cube Timer',
+                'slug' => 'cube-timer',
+                'summary' => 'A tiny static site with a Start Timer button. It does not start a timer.',
+                'body' => <<<'MD'
+                    A tiny static site hosted on Cloudflare Pages. Tapping **Start Timer** plays a full-screen video with sound.
+
+                    Built with love. Never gonna let your solve down.
+                    MD,
+                'stack' => ['HTML', 'Cloudflare Pages'],
+                'status' => ProjectStatus::Live,
+                'live_url' => 'https://timer.rileyedward.com',
+                'repo_url' => 'https://github.com/rileyedward/cube-timer',
+                'is_visible' => false,
+            ],
+            [
+                'title' => 'Straftat Score Keeper',
+                'slug' => 'straftat-score-keeper',
+                'summary' => 'A companion app for tracking score across game-night tournaments of the arena shooter Straftat.',
+                'body' => <<<'MD'
+                    Straftat Score Keeper fills the gap left by the game's lack of a built-in tournament mode. A host logs matches across 1v1, 2v2 and FFA throughout the night, the app computes a unified leaderboard that fairly weighs all three modes, and it crowns a champion (with a few bonus stars) when the night wraps up. Players persist across sessions so stats build up over time.
+
+                    ## Features
+
+                    - **Tournament sessions**: one active tournament per game night, locked when it ends.
+                    - **Match wizard**: mode, players, score; FFA placements derive automatically with proper tie handling.
+                    - **Combined leaderboard**: mode-aware scoring, filterable by overall, 1v1, 2v2 or FFA.
+                    - **Bonus stars**: eight Mario Party-style awards computed at the end of each tournament.
+                    - **Player roster**: profiles with image upload and cross-tournament stats.
+                    MD,
+                'stack' => ['Laravel', 'PHP', 'Vue', 'TypeScript', 'Tailwind', 'PostgreSQL', 'Pest'],
+                'status' => ProjectStatus::InProgress,
+                'repo_url' => 'https://github.com/rileyedward/straftat-score-keeper',
+            ],
+            [
+                'title' => 'Audio Waveform Visualizer',
+                'slug' => 'audio-waveform-visualizer',
+                'summary' => 'Render YouTube-ready visualizer videos for DJ mixes, with local track identification and chapters.',
+                'body' => <<<'MD'
+                    Audio Waveform Visualizer turns DJ mixes into uploadable visualizer videos. Feed it a WAV or MP3, pick a visual style and color palette, and it produces a 1080p MP4 with a reactive waveform, your artist and mix title, an optional logo, and a progress bar.
+
+                    Point it at your crate of source tracks and it fingerprints them, identifies which track plays when in the mix, overlays the now-playing track on the video, writes a timestamped YouTube tracklist and embeds chapter markers. Everything runs locally, with no external APIs.
+
+                    ## Features
+
+                    - **Four visualizer styles**: radial, bars, mirrored waveform and particle bloom.
+                    - **Six color palettes**, editable via JSON.
+                    - **Local track fingerprinting** into a SQLite database.
+                    - **Dynamic on-screen tracklist** with a "NEXT:" preview between tracks.
+                    - **YouTube tracklist and MP4 chapters**.
+                    - **Local web UI** for picking a mix, previewing styles and watching render progress.
+                    MD,
+                'stack' => ['Python', 'FFmpeg', 'SQLite', 'JavaScript'],
+                'status' => ProjectStatus::InProgress,
+                'repo_url' => 'https://github.com/rileyedward/audio-waveform-visualizer',
             ],
             [
                 'title' => 'Corvesive',
                 'slug' => 'corvesive',
-                'kind' => ProjectKind::Personal,
-                'summary' => 'A budgeting app for tracking income, monthly expenses and what is left over.',
+                'summary' => 'Simplify your budgeting: track income from pay stubs, record expenses and see what is left.',
                 'body' => <<<'MD'
-                    Corvesive is an online application designed to simplify your budgeting. Track your income by uploading pay stubs, record your monthly expenses, and effortlessly monitor where your money is going and how much you have left. Gain clarity on your financial situation to make better budgeting decisions.
+                    Corvesive is an online application designed to simplify budgeting. Track your income by uploading pay stubs, record your monthly expenses, and monitor where your money is going and how much you have left.
 
                     ## Features
 
-                    - Upload pay stubs and keep a record of all your income sources.
-                    - Record monthly expenses and categorize them for easy tracking.
-                    - Visualize where your money is going to make informed budgeting decisions.
+                    - **Income manager**: upload pay stubs and keep a record of all your income sources.
+                    - **Expense manager**: record monthly expenses and categorize them for easy tracking.
+                    - **Spending insights**: visualize where your money is going to make informed budgeting decisions.
                     MD,
-                'role' => 'Design and full-stack build',
-                'stack' => ['Laravel', 'PHP', 'Vue', 'TypeScript', 'Tailwind', 'MySQL'],
-                'status' => ProjectStatus::Live,
+                'stack' => ['Laravel', 'PHP', 'Vue', 'JavaScript'],
+                'status' => ProjectStatus::Archived,
                 'repo_url' => 'https://github.com/rileyedward/corvesive',
-                'is_visible' => true,
+            ],
+            [
+                'title' => 'Applicy',
+                'slug' => 'applicy',
+                'summary' => 'Streamline your job application journey with application tracking and AI help on resumes and cover letters.',
+                'body' => <<<'MD'
+                    Applicy is an online platform that simplifies the job application process. Create a profile to track all your job applications and monitor their progress in real time.
+
+                    ## Features
+
+                    - **Resumes**: store your resumes and get AI recommendations based on the job you're applying for.
+                    - **Cover letters**: store your cover letters and have the AI assistant tailor versions for each job.
+                    MD,
+                'stack' => ['Laravel', 'PHP', 'Vue', 'JavaScript'],
+                'status' => ProjectStatus::Archived,
+                'repo_url' => 'https://github.com/rileyedward/applicy',
             ],
             [
                 'title' => 'AirQueue',
                 'slug' => 'airqueue',
-                'kind' => ProjectKind::Personal,
-                'summary' => 'Collaborative Spotify listening sessions with friends.',
+                'summary' => 'Share music with your friends using Spotify-powered Live Sessions.',
                 'body' => <<<'MD'
-                    AirQueue is a platform designed to enhance your music-sharing experience with friends through interactive Live Sessions. It integrates with the Spotify Developer API to search for songs and interact with each listener's Spotify account.
+                    AirQueue enhances music sharing with friends through interactive Live Sessions, integrating with the Spotify Developer API to search for songs and interact with each listener's Spotify account.
 
                     ## Features
 
-                    - Connect your AirQueue account with Spotify.
-                    - Join a "band" with other members to gather a group of like-minded music friends.
-                    - Host or join a session with friends to search for and request songs together.
+                    - **Spotify integration**: connect your AirQueue account with Spotify.
+                    - **Bands**: join a group of like-minded music friends.
+                    - **Live sessions**: host or join a session and request songs together.
+                    - **Song requests**: approve incoming requests to add them to your live Spotify queue.
                     MD,
-                'role' => 'Design and full-stack build',
-                'stack' => ['Laravel', 'PHP', 'Vue', 'TypeScript', 'Tailwind', 'MySQL'],
-                'status' => ProjectStatus::Live,
+                'stack' => ['Laravel', 'PHP', 'Vue', 'TypeScript', 'Spotify API'],
+                'status' => ProjectStatus::Archived,
                 'repo_url' => 'https://github.com/rileyedward/airqueue',
-                'is_visible' => true,
-            ],
-            [
-                'title' => 'Poker hand analysis tool',
-                'slug' => 'poker-hand-analysis',
-                'kind' => ProjectKind::Personal,
-                'summary' => 'TODO: name, one-line summary and link.',
-                'stack' => [],
-                'status' => ProjectStatus::InProgress,
-            ],
-            [
-                'title' => 'Party games site',
-                'slug' => 'party-games',
-                'kind' => ProjectKind::Personal,
-                'summary' => 'TODO: one-line summary. Turn on once a game is playable.',
-                'stack' => [],
-                'status' => ProjectStatus::InProgress,
-            ],
-            [
-                'title' => 'gip',
-                'slug' => 'gip',
-                'kind' => ProjectKind::Personal,
-                'summary' => 'A CLI for quick work-in-progress commits and squashing them later.',
-                'body' => <<<'MD'
-                    gip is a lightweight command-line tool designed to streamline work-in-progress (WIP) commits. If you often find yourself juggling micro-commits during development, gip helps you manage them without complicating your Git workflow.
-
-                    ## Features
-
-                    - Quickly commit all the work you currently have in progress.
-                    - Rebase recent WIP commits into a single commit with a provided message.
-                    MD,
-                'role' => 'Author',
-                'stack' => ['Go', 'Git'],
-                'status' => ProjectStatus::Live,
-                'repo_url' => 'https://github.com/rileyedward/gip',
             ],
             [
                 'title' => 'rbranch',
                 'slug' => 'rbranch',
-                'kind' => ProjectKind::Personal,
-                'summary' => 'A CLI built with Go and Bubble Tea that simplifies Git branch management.',
+                'summary' => 'A CLI tool built with Go and Bubble Tea to simplify Git branches.',
                 'body' => <<<'MD'
-                    rbranch is a CLI tool built with Go and Bubble Tea designed to simplify your Git workflow. If you're tired of typing long branch names, rbranch lets you perform common branch operations with a few keystrokes.
+                    rbranch is a CLI tool built with Go and Bubble Tea designed to simplify your Git workflow. If you're tired of typing long and cumbersome branch names, rbranch lets you perform common branch operations with a few keystrokes.
 
                     ## Features
 
-                    - Switch to another branch without typing its full name.
-                    - Safely clean up unused local branches.
-                    - Copy an entire branch name to your clipboard instantly.
+                    - **Checkout branches**: switch to another branch without typing its full name.
+                    - **Delete branches**: safely clean up unused local branches.
+                    - **Copy branch names**: copy an entire branch name to your clipboard.
                     MD,
-                'role' => 'Author',
                 'stack' => ['Go', 'Bubble Tea', 'Git'],
-                'status' => ProjectStatus::Live,
+                'status' => ProjectStatus::Archived,
                 'repo_url' => 'https://github.com/rileyedward/rbranch',
             ],
             [
-                'title' => 'Ripcord',
-                'slug' => 'ripcord',
-                'kind' => ProjectKind::Personal,
-                'summary' => 'TODO: a Laravel starter kit showing how I build.',
-                'stack' => ['Laravel', 'Vue'],
-                'status' => ProjectStatus::InProgress,
+                'title' => 'gip',
+                'slug' => 'gip',
+                'summary' => 'A lightweight CLI tool for work-in-progress commits.',
+                'body' => <<<'MD'
+                    gip is a lightweight command-line tool designed to streamline work-in-progress (WIP) commits. If you often juggle micro-commits during development, gip helps you manage them without complicating your Git workflow.
+
+                    ## Features
+
+                    - **WIP commit**: quickly commit all the work you currently have in progress.
+                    - **WIP rebasing**: rebase recent WIP commits into a single commit with a provided message.
+                    MD,
+                'stack' => ['Go', 'Git'],
+                'status' => ProjectStatus::Archived,
+                'repo_url' => 'https://github.com/rileyedward/gip',
             ],
         ];
 
         foreach ($projects as $index => $project) {
             Project::query()->updateOrCreate(['slug' => $project['slug']], [
-                'body' => null,
+                'kind' => ProjectKind::Personal,
                 'role' => null,
                 'live_url' => null,
-                'repo_url' => null,
-                'is_visible' => false,
+                'is_visible' => true,
                 'is_featured' => false,
                 ...$project,
                 'sort_order' => $index,
