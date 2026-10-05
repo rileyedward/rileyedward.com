@@ -21,6 +21,7 @@ declare module '@inertiajs/core' {
             name: string;
             auth: Auth;
             site: SiteSettings;
+            unreadMessageCount: number | null;
             sidebarOpen: boolean;
             [key: string]: unknown;
         };

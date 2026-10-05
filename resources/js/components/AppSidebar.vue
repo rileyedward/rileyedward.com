@@ -1,6 +1,13 @@
 <script setup lang="ts">
-import { Link } from '@inertiajs/vue3';
-import { BookOpen, FolderGit2, LayoutGrid } from '@lucide/vue';
+import { Link, usePage } from '@inertiajs/vue3';
+import {
+    ExternalLink,
+    FolderKanban,
+    Inbox,
+    LayoutGrid,
+    Settings2,
+} from '@lucide/vue';
+import { computed } from 'vue';
 import AppLogo from '@/components/AppLogo.vue';
 import NavFooter from '@/components/NavFooter.vue';
 import NavMain from '@/components/NavMain.vue';
@@ -14,27 +21,45 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from '@/components/ui/sidebar';
-import { dashboard } from '@/routes';
+import { dashboard, home } from '@/routes';
+import { index as projects } from '@/routes/admin/projects';
+import { index as inbox } from '@/routes/inbox';
+import { edit as siteSettings } from '@/routes/site-settings';
 import type { NavItem } from '@/types';
 
-const mainNavItems: NavItem[] = [
+const page = usePage();
+
+const mainNavItems = computed<NavItem[]>(() => [
     {
         title: 'Dashboard',
         href: dashboard(),
         icon: LayoutGrid,
     },
-];
+    {
+        title: 'Inbox',
+        href: inbox(),
+        icon: Inbox,
+        badge: page.props.unreadMessageCount,
+        startsWith: true,
+    },
+    {
+        title: 'Projects',
+        href: projects(),
+        icon: FolderKanban,
+        startsWith: true,
+    },
+    {
+        title: 'Site settings',
+        href: siteSettings(),
+        icon: Settings2,
+    },
+]);
 
 const footerNavItems: NavItem[] = [
     {
-        title: 'Repository',
-        href: 'https://github.com/laravel/vue-starter-kit',
-        icon: FolderGit2,
-    },
-    {
-        title: 'Documentation',
-        href: 'https://laravel.com/docs/starter-kits#vue',
-        icon: BookOpen,
+        title: 'View site',
+        href: home().url,
+        icon: ExternalLink,
     },
 ];
 </script>
