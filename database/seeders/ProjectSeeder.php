@@ -10,12 +10,35 @@ use Illuminate\Database\Seeder;
 class ProjectSeeder extends Seeder
 {
     /**
-     * Seed projects from Riley's public GitHub repositories (github.com/rileyedward),
-     * newest first. Copy comes from each repository's README.
+     * Seed client work, then projects from Riley's public GitHub repositories
+     * (github.com/rileyedward), newest first. Copy comes from each README.
      */
     public function run(): void
     {
         $projects = [
+            [
+                'title' => 'Dandelines Design',
+                'slug' => 'dandelines-design',
+                'kind' => ProjectKind::Client,
+                'summary' => 'Website, shop and admin panel for an event planning, floral and artwork studio in Independence, Missouri.',
+                'body' => <<<'MD'
+                    Dandelines Design is the website for an event planning, floral and original artwork studio in Independence, Missouri. Visitors can learn about the studio and its services, read the blog, subscribe to the newsletter, send a message or request a quote, and buy handmade textiles, prints and mixed media pieces from the shop.
+
+                    Behind the scenes, a custom admin panel runs the business side of the site.
+
+                    ## What it handles
+
+                    - **Shop and checkout**: products and stock, with payments through Stripe.
+                    - **Orders**: from payment through to printed shipping labels.
+                    - **Inquiries**: the contact inbox and quote requests, with email replies.
+                    - **Content**: blog posts and the featured read, plus testimonials.
+                    - **Newsletter**: subscribers and email campaigns.
+                    MD,
+                'stack' => ['Laravel', 'PHP', 'Vue', 'Inertia', 'Tailwind', 'Stripe', 'EasyPost', 'Resend'],
+                'status' => ProjectStatus::Live,
+                'live_url' => 'https://dandelinesdesign.com',
+                'is_featured' => true,
+            ],
             [
                 'title' => "Pick'ems",
                 'slug' => 'pickems',
